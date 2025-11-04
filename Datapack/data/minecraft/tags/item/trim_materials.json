@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:breeze_rod",
+        "minecraft:blaze_rod",
+        "minecraft:nautilus_shell",
+        "minecraft:nautilus_shell",
+        "minecraft:nautilus_shell",
+        "minecraft:nautilus_shell",
+        "minecraft:nautilus_shell",
+        "minecraft:nautilus_shell",
+        "minecraft:honeycomb",
+        "minecraft:breeze_rod",
+        "minecraft:blaze_rod"
+    ]
+}
