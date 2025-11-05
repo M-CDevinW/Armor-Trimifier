@@ -36,7 +36,8 @@ def add_translation_key(trim_id):
 
     translation_key = f"trim_material.minecraft.{trim_id}"
     capitilized_string = str.title(trim_id)
-    finished_string = capitilized_string.replace("_", " ")
+    spaced_string = capitilized_string.replace("_", " ")
+    finished_string = spaced_string + " Material"
     data[translation_key] = finished_string
 
     with open(f"Resource_Pack/assets/more_trims/lang/en_us.json", "w") as fp:

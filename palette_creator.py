@@ -48,8 +48,15 @@ def pngifier(palette, trim_id):
 
     # Create image with a row and 8 columns
     image = Image.new("RGB", (8, 1))
+    
+    # Create pixel data from palette colors
     pixels = [color for color, _, _ in palette]
-    image.putdata(pixels)
+    
+    # Fill the image pixel by pixel instead of using putdata
+    for x in range(min(8, len(pixels))):
+        if x < len(pixels):
+            image.putpixel((x, 0), pixels[x])
+    
     image.save(file_path)
     # print(f"Palette saved at {file_path}")
 

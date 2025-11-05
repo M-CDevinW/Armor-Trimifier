@@ -1,9 +1,0 @@
-{
-    "asset_name": "blaze_rod",
-    "description": {
-        "translate": "trim_material.minecraft.blaze_rod",
-        "color": "#af6b19"
-    },
-    "ingredient": "minecraft:blaze_rod",
-    "item_model_index": 1
-}

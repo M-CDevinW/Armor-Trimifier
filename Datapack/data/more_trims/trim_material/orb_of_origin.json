@@ -1,0 +1,9 @@
+{
+    "asset_name": "orb_of_origin",
+    "description": {
+        "translate": "trim_material.minecraft.orb_of_origin",
+        "color": "#afb983"
+    },
+    "ingredient": "origins:orb_of_origin",
+    "item_model_index": 1
+}

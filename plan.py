@@ -40,11 +40,18 @@ Substeps:
 
 """
 All of the above has been finished. Below is the list of updates to do:
-1. Fix the max image size
-2. Make it work with trim ids other than item names
-3. Make it work with modded namespaces
-4. Add a function to clear all modified and added files
-5. Even better than the above, make the whole program create and zip a copy of the data/resource packs
-6. Make a function that iterates through all the files in images and trimifies them
-7. Add a filepath option to main.py to allow dumping and compiling datapacks and resource packs directly into instance folders
+1. Add a way for a user to define any number of trim ids and trim ingredients instead of all or singular generation options
+"""
+
+"""
+Version 1.1 Changelog:
+1. trim_id can now be anything, not just an item namespace
+2. Fixed program failing if the image is too large
+3. Fixed translation keys to have "Material" at the end
+4. Added a WIP function that trimifies an entire folder of images
+5. The trim materials tag no longer lists duplicate entires
+6. Added a new function to main.py that packages the Resource and Datapacks into their respective folders when provided a proper filepath
+7. Added functions to clear the resource pack folder, datapack folder, or both, reverting them to their base state
+8. Made a new master function that can trimify an individual image, ending with zipped resource and datapacks in your game files
+9. Verified modded namespaces generate properly
 """

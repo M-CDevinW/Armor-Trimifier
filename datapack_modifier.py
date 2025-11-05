@@ -39,7 +39,10 @@ def modify_tag(trim_ingredient):
     with open(f"Datapack/data/minecraft/tags/item/trim_materials.json", "r") as file:
         data = json.load(file)
 
-    data["values"].append(f"{trim_ingredient}")
+    if trim_ingredient in data["values"]:
+        pass
+    else:
+        data["values"].append(f"{trim_ingredient}")
 
     with open(f"Datapack/data/minecraft/tags/item/trim_materials.json", "w") as fp:
         json.dump(data, fp, indent = 4)
