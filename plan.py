@@ -41,6 +41,22 @@ Substeps:
 """
 All of the above has been finished. Below is the list of updates to do:
 1. Add a way for a user to define any number of trim ids and trim ingredients instead of all or singular generation options
+2. Fix items with too few colors just having black (probably do repeat colors with randomness added to RGB values?)
+3. Make a way for pure black/white to stay if the texture has fewer than 8 other colors
+4. Ensure enderscape "statis" trim compat (maybe as an option in the trimifier/mass trimifier functions?)
+5. Make the turtle shell and drift leggings code more compact
+"""
+
+"""
+List of stuff to do for the all trim materials mod:
+1. Iterate through all MC items and compile as a mod that includes all trims
+2. Fix leather armor textures in mass trim
+3. Fix filled map texture
+4. Fix full wood blocks not being usable (maybe make logs use the inner texture instead?)
+5. Make enchanted golden apples usable
+6. Make shield usable
+7. Fix all the grayscale plants; Fern, Large Fern, Grass, Tall Grass, Vines, all leaves (Except Azaleas)
+8. Why no copper stuff?
 """
 
 """
@@ -54,4 +70,11 @@ Version 1.1 Changelog:
 7. Added functions to clear the resource pack folder, datapack folder, or both, reverting them to their base state
 8. Made a new master function that can trimify an individual image, ending with zipped resource and datapacks in your game files
 9. Verified modded namespaces generate properly
+"""
+
+"""
+Version 1.2 Changelog:
+1. Trims now work with the flow and bolt trim patterns
+2. Trimmed items now properly change colors in the inventory
+3. Changed resource pack file structure to move more files to the more_trims namespace
 """

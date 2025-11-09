@@ -10,15 +10,27 @@ def clear_resources(filepath):
     # print(f"The directories in the color palettes folder are {color_palettes_folder}")
 
     # Remove color palette textures
-    for file in os.listdir(rf"{filepath}\assets\minecraft\textures\trims\color_palettes"):
-        full_path = rf"{filepath}\assets\minecraft\textures\trims\color_palettes"
+    for file in os.listdir(rf"{filepath}\assets\more_trims\textures\trims\color_palettes"):
+        full_path = rf"{filepath}\assets\more_trims\textures\trims\color_palettes"
         # print(f"File is {file}")
+        os.remove(path = rf"{full_path}\{file}")
+
+    # Remove model json definitions
+    for file in os.listdir(rf"{filepath}\assets\more_trims\models\item"):
+        full_path = rf"{filepath}\assets\more_trims\models\item"
         os.remove(path = rf"{full_path}\{file}")
     
     # Revert atlases to originals
     for file in os.listdir(rf"{filepath}\assets\minecraft\atlases"):
         # print(f"File looks like {file}")
         shutil.copyfile(src = rf"Skeleton_Resource_Pack\assets\minecraft\atlases\{file}", dst = rf"{filepath}\assets\minecraft\atlases\{file}")
+
+    # Revert model jsons to originals
+    for file in os.listdir(rf"{filepath}\assets\minecraft\models\item"):
+        shutil.copyfile(src = rf"Skeleton_Resource_Pack\assets\minecraft\models\item\{file}", dst = rf"{filepath}\assets\minecraft\models\item\{file}")
+
+    # Revert drift leggings json
+    shutil.copyfile(src = rf"Skeleton_Resource_Pack\assets\enderscape\models\item\drift_leggings.json", dst = rf"{filepath}\assets\enderscape\models\item\drift_leggings.json")
 
     # Reverts lang file to original state
     shutil.copyfile(src = rf"Skeleton_Resource_Pack\assets\more_trims\lang\en_us.json", dst = rf"{filepath}\assets\more_trims\lang\en_us.json")

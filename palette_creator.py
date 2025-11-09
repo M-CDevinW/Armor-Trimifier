@@ -44,7 +44,7 @@ def brightness_sorter(palette):
     return brightness_palette
 
 def pngifier(palette, trim_id):
-    file_path = f"Resource_Pack/assets/minecraft/textures/trims/color_palettes/{trim_id}.png"
+    file_path = f"Resource_Pack/assets/more_trims/textures/trims/color_palettes/{trim_id}.png"
 
     # Create image with a row and 8 columns
     image = Image.new("RGB", (8, 1))
@@ -67,7 +67,7 @@ def palette_dumper(trim_id, palette):
     for color in palette[:]:
         (r,g,b), freq = color
         # print(f"The rgb values of {color} are {r}, {g}, and {b} with frequency of {freq}")
-        if (r <= 5 and g <= 5 and b <= 5) or (r >= 250 and g >= 250 and b >= 250):
+        if (r <= 3 and g <= 3 and b <= 3) or (r >= 252 and g >= 252 and b >= 252):
             palette.remove(color)
 
     # print(f"Post-filter palette looks like {palette} with length {len(palette)}")

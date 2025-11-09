@@ -10,6 +10,8 @@ def find_leading_color(palette):
 
     # print(f"The palette sorted by frequency looks like {palette}")
 
+    # print(f"Palette looks like {palette}")
+
     (r, g, b), freq = palette[0]
 
     hex_code = rgb_to_hex(r, g, b)
@@ -18,7 +20,7 @@ def find_leading_color(palette):
 
     return hex_code
 
-def generate_json(trim_id, trim_ingredient, palette):
+def generate_json(trim_id, trim_ingredient, palette, model_index: float):
     
     description_object = {}
     description_object["translate"] = f"trim_material.minecraft.{trim_id}"
@@ -28,7 +30,7 @@ def generate_json(trim_id, trim_ingredient, palette):
     trim_json["asset_name"] = trim_id
     trim_json["description"] = description_object
     trim_json["ingredient"] = trim_ingredient
-    trim_json["item_model_index"] = 1
+    trim_json["item_model_index"] = model_index
 
     with open(f"Datapack/data/more_trims/trim_material/{trim_id}.json", "w") as fp:
         json.dump(trim_json, fp, indent = 4)
